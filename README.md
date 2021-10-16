@@ -1,64 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Event.ly
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Motywacja
 
-## About Laravel
+Event.ly powstało jako narzędzie umożliwiające użytkownikom szukania innych ludzi
+do wykonywania razem innych aktywności. Niezależnie czy ktoś szuka ludzi do pójścia 
+do kina, czy na kilkudniową wycieczkę górską, event.ly sprawia, że nie jest to już problemem
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## O event.ly
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Event.ly to platforma pozwalająca użytkownikom na tworzenie i dołączanie do różnych wydarzeń.
+Użytkownicy będą mogli wystawiać ogłoszenia, do których będą mogli dołączać inni użytkownicy.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Cele wydarzeń nie są z góry sprecyzowane; użytkownicy mają swobodę w tworzeniu dowolnych wydarzeń
+tak długo jak nie kłóci się to z regulaminem platformy. 
 
-## Learning Laravel
+Event.ly w obecnej iteracji jest stroną internetową z responsywnym design'em.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Struktura aplikacji
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Użytkownik
 
-## Laravel Sponsors
+Użytkownik będzie miał dostęp do następujących funkcji:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Dodanie avatar'u
+- Uzupełnienie danych o sobie
+- Tworzenie wydarzeń
+- Usuwanie stworzonych wydarzeń
+- Zamykanie wydarzeń
+- Obserwowanie i dołączanie do wydarzeń
+- Wysyłanie wiadomości do innych użytkowników
+- Bycia powiadomionym o obserwowanych wydarzeniach
+- Usunięcie konta
+- Panel użytkownika
 
-### Premium Partners
+### Wydarzenie
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+Wydarzenie będzie pewnego rodzaju ofertą. Będzie zawierać tytuł, zdjęcie, opis, limit osób i lokalizację.
 
-## Contributing
+Pod wydarzeniem będzie miejsce na komentarze, gdzie użytkownicy będą mogli dyskutować na temat wydarzenia.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Tablica
 
-## Code of Conduct
+Tablica to miejsce, gdzie wyświetlają się wydarzenia. Zawiera paginację oraz filtry,
+dzięki którym można szukać interesujących nas wydarzeń
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Panel użytkownika
 
-## Security Vulnerabilities
+W tym miejscu użytkownik będzie mógł zarządzać swoim kontem.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Kategorie
 
-## License
+Wydarzenia będą mogły być przypisane do kategorii, w celu ułatwienia użytkownikom wyszukiwania interesujących ich
+ogłoszeń
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Problemy związane z lokalizacją
+
+Aby uniknąć problemów związanych z podawaniem dokładnej lokalizacji, użytkownicy będą widzieli jedynie przybliżoną
+lokalizację wydarzenia.
+
+Gdy data wydarzenia zbliży się na tyle, że twórca uzna że powinien podzielić się dokładną lokalizacją, będzie w stanie
+zablokować wydarzenie ( uniemożliwić dołączanie )
+i podzielić się dokładną lokalizacją.
+
+Rozwiązanie takie to kompromis między prywatnością a praktycznością
+( gdyby żadna lokalizacja nie była podana) użytkownicy nie wiedzieliby czy są w stanie dojechać na miejsce
+
+## Architektura
+
+Backend aplikacji będzie napisany przy użyciu MVC.   
+Frontend aplikacji będzie kompilowany przy użyciu Laravel Mix i dołączany w odpowiednich miejscach na stronie.
+
+## Technologie
+
+Backend:
+
+- Laravel
+- MySQL
+
+Frontend:
+
+- SCSS
+- HTML
+- JS
+- Alpine.js
+
+
+
+
+
