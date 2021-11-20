@@ -12,6 +12,7 @@
     <title>Event.ly</title>
 </head>
 <body>
+    @include('partials.header')
 
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
