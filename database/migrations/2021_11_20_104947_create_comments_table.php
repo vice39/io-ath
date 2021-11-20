@@ -15,8 +15,14 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
             $table->timestamps();
+
+            $table->text('content');
+
+            $table
+                ->foreignId('author_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
         });
     }
 

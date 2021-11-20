@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Meeting;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
         User::factory(2000)->create();
         Meeting::factory(200)->create();
         Category::factory(30)->create();
+        Comment::factory(30)->create();
 
         foreach (Meeting::all() as $meeting) {
             $participants = User::query()
