@@ -20,4 +20,8 @@ class Meeting extends Model
         return $this->belongsToMany(User::class, relatedPivotKey: 'participant_id');
     }
 
+    public function categories() {
+        return $this->belongsToMany(Category::class);
+    }
+
 }
