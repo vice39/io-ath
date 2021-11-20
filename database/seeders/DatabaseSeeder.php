@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Meeting;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(2000)->create();
+        Meeting::factory(200)->create();
+
+        foreach (Meeting::all() as $meeting) {
+            $participants = User::query()
+                ->inRandomOrder()
+                ->limit(rand(0, 30))
+                ->get();
+
+            $meeting->participants()->sync($participants);
+        }
     }
 }
