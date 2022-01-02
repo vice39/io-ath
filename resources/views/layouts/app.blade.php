@@ -13,6 +13,7 @@
 </head>
 <body>
     @include('partials.header')
+    @include('partials.meeting')
     @include('partials.nav')
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
