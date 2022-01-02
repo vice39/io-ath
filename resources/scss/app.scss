@@ -1,3 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 
 @import 'partials/header';
+@import 'partials/nav';
+
+$fa-font-path: "../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
