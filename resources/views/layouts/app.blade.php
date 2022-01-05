@@ -14,6 +14,7 @@
 <body>
     @include('partials.header')
     @include('partials.meeting')
+    @include('partials.comment')
     @include('partials.nav')
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
