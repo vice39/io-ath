@@ -85,6 +85,39 @@
   margin-right: 5px;
 }
 
+.comment {
+  margin-top: 25px;
+  color: #606770;
+}
+.comment__wrapper {
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #eee5e9;
+}
+
+.comment-author {
+  padding: 15px;
+}
+.comment-author__image-wrapper {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: #fa786b;
+  overflow: hidden;
+}
+.comment-author__data {
+  margin-left: 10px;
+}
+.comment-author__name {
+  font-size: 16px;
+}
+
+.comment-content {
+  padding: 5px 15px 0;
+}
+.comment-content__text {
+  font-size: 14px;
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
