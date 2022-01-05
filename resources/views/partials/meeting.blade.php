@@ -18,12 +18,12 @@
                     </div>
                     <img src="https://image.shutterstock.com/image-photo/deskdecorative-table-lamp-loft-style-600w-1920224057.jpg" class="meeting-image w-100">
                     <div class="meeting-bar d-flex align-items-center justify-content-end">
-                        <div class="meeting-bar__icon d-flex aic">
-                            <i class="fas fa-heart d-flex aic"></i>
+                        <div class="meeting-bar__icon d-flex align-items-center">
+                            <i class="fas fa-heart d-flex align-items-center"></i>
                             3
                         </div>
-                        <div class="meeting-bar__icon d-flex aic">
-                            <i class="fas fa-comment d-flex aic"></i>
+                        <div class="meeting-bar__icon d-flex align-items-center">
+                            <i class="fas fa-comment d-flex align-items-center"></i>
                             5
                         </div>
                     </div>
