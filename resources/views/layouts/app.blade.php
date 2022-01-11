@@ -13,6 +13,7 @@
 </head>
 <body>
     @include('partials.header')
+    @include('partials.main-bar')
     @include('partials.meeting')
     @include('partials.comment')
     @include('partials.nav')
