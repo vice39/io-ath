@@ -1,0 +1,45 @@
+.main-bar{
+    margin: 20px 0;
+
+    &__image-wrapper {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        background: #fa786b;
+        overflow: hidden;
+    }
+
+    &__input {
+        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #f2f3f5;
+        background: #f2f3f5;
+        margin-left: 10px;
+        border-radius: 8px;
+    }
+
+    &__category-wrapper {
+        margin-top: 15px;
+        gap: 5px;
+    }
+    &__single-category {
+        font-size: 12px;
+        border: 2px solid #606770;
+        border-radius: 8px;
+        padding: 7px 10px;
+        color: #FF8811;
+        line-height: 1;
+        transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+        &:hover {
+            border-color: #FF8811;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__filter {
+        font-size: 18px;
+        color: #606770;
+        margin: 0 0 0 auto;
+    }
+}
