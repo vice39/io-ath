@@ -16,10 +16,10 @@
     <div class="not-found">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                     <h1 class="not-found__heading">404</h1>
-                    <span class="not-found__description">Przepraszamy ale strona, której szukasz nie istnieje</span>
-                    <a href="/" class="not-found__button button">Strona główna</a>
+                    <span class="not-found__description text-center">Przepraszamy ale strona, której szukasz nie istnieje</span>
+                    <a href="/" class="not-found__button button text-white text-decoration-none">Strona główna</a>
                 </div>
             </div>
         </div>

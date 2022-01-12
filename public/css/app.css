@@ -159,6 +159,25 @@
   margin: 0 0 0 auto;
 }
 
+.not-found__heading {
+  font-size: 100px;
+  color: #484D6D;
+  font-family: "Salsa", cursive;
+}
+.not-found__description {
+  margin: 15px 0 45px;
+  font-size: 20px;
+}
+.not-found__button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background: #FF8811;
+  border-radius: 8px;
+  padding: 10px 30px;
+  line-height: 1;
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

@@ -1,0 +1,20 @@
+.not-found {
+    &__heading {
+        font-size: 100px;
+        color: #484D6D;
+        font-family: "Salsa", cursive;
+    }
+
+    &__description {
+        margin: 15px 0 45px;
+        font-size: 20px;
+    }
+
+    &__button {
+        max-width: fit-content;
+        background: #FF8811;
+        border-radius: 8px;
+        padding: 10px 30px;
+        line-height: 1;
+    }
+}
