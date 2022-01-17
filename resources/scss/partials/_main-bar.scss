@@ -12,8 +12,8 @@
     &__input {
         font-size: 14px;
         padding: 10px;
-        border: 1px solid #f2f3f5;
-        background: #f2f3f5;
+        border: 1px solid  $backgroundWhite;
+        background:  $backgroundWhite;
         margin-left: 10px;
         border-radius: 8px;
     }
@@ -24,22 +24,22 @@
     }
     &__single-category {
         font-size: 12px;
-        border: 2px solid #606770;
+        border: 2px solid  $darkGrey;
         border-radius: 8px;
         padding: 7px 10px;
-        color: #FF8811;
+        color: $orangeColor;
         line-height: 1;
         transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
         &:hover {
-            border-color: #FF8811;
+            border-color: $orangeColor;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
 
     &__filter {
         font-size: 18px;
-        color: #606770;
+        color:  $darkGrey;
         margin: 0 0 0 auto;
     }
 }

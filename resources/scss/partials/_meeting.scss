@@ -2,11 +2,11 @@
 
 .meeting {
     margin-top: 25px;
-    color: #606770;
+    color:  $darkGrey;
     
     &__wrapper {
         border-radius: 8px;
-        border: 1px solid #eee5e9;
+        border: 1px solid  $lightGrey;
 
     }
 }
@@ -55,7 +55,7 @@
 
 .meeting-bar {
     padding: 10px 15px;
-    border-top: 1px solid #eee5e9;
+    border-top: 1px solid  $lightGrey;
 
     &__icon + &__icon {
         margin-left: 10px;
