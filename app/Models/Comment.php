@@ -17,4 +17,9 @@ class Comment extends Model
     {
         return $this->belongsTo(User::class, 'author_id');
     }
+
+    public function meeting()
+    {
+        return $this->belongsTo(Meeting::class, 'meeting_id');
+    }
 }
