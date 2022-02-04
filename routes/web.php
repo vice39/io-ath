@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('meeting', \App\Http\Controllers\MeetingController::class);
+Route::resource('meeting.comments', \App\Http\Controllers\CommentController::class);
