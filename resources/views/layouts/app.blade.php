@@ -13,9 +13,7 @@
 </head>
 <body>
     @include('partials.header')
-    @include('partials.main-bar')
-    @include('partials.meeting')
-    @include('partials.comment')
+    @yield('content')
     @include('partials.nav')
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
