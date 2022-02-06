@@ -6,7 +6,7 @@
                     <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/0032047ebe6bad7a6914fabddce8e054fa651fb8_full.jpg" alt="" class="meeting-author__image w-100 h-100 object-fit-cover">
                 </div>
                 <form class="main-bar__form w-100" action="/meeting" method="post">
-                    
+
                     @csrf
 
                     <div class="main-bar__input-wrapper ms-3 d-flex flex-column align-items-start justify-content-center">
@@ -26,19 +26,19 @@
                             <label class="mb-2" for="name">URL Obrazu</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="image_url">
                         </div>
-                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
-                            <label class="mb-2" for="name">Data startu</label>
-                            <input class="main-bar__input flex-grow-1 w-100" name="start_date">
-                        </div>
-                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
-                            <label class="mb-2" for="name">Koniec</label>
-                            <input class="main-bar__input flex-grow-1 w-100" name="end_date">
-                        </div>
+{{--                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">--}}
+{{--                            <label class="mb-2" for="name">Data startu</label>--}}
+{{--                            <input class="main-bar__input flex-grow-1 w-100" name="start_date">--}}
+{{--                        </div>--}}
+{{--                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">--}}
+{{--                            <label class="mb-2" for="name">Koniec</label>--}}
+{{--                            <input class="main-bar__input flex-grow-1 w-100" name="end_date">--}}
+{{--                        </div>--}}
                         <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="mb-2" for="name">Opis lokacji</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="location_description">
                         </div>
-                    
+
                         <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="mb-2" for="name">Lat</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="lat">
@@ -47,7 +47,7 @@
                             <label class="mb-2" for="name">Lng</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="lng">
                         </div>
-                    
+
                         <input class="button ms-3 mt-3 text-white text-decoration-none" style="border-radius:8px;border:none;" type="submit">
                         <div class="main-bar__hidden button ms-3 mt-3 text-white text-decoration-none" style="border-radius:8px;cursor:pointer;">Hide</div>
                     </div>
@@ -57,7 +57,7 @@
                 </form>
             </div>
             <script>
-                
+
                 let mainBarOther = document.querySelector('.main-bar__other');
                 let mainBarForm = document.querySelector('.main-bar__form');
                 let mainBarHideButton = document.querySelector('.main-bar__hidden');
@@ -70,7 +70,7 @@
                         mainBarOther.style.maxHeight = `${mainBarOther.getAttribute('data-height')}px`;
                         mainBarOther.classList.remove('main-bar__other--hidden');
                     }
-                    
+
                 });
 
                 mainBarHideButton.addEventListener('click', _ => {

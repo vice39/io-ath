@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Meeting;
 use App\Models\User;
+use Carbon\Carbon;
+use Carbon\Exceptions\Exception;
 use Illuminate\Http\Request;
 
 class MeetingController extends Controller
@@ -16,7 +18,9 @@ class MeetingController extends Controller
 
     public function index(Meeting $meeting)
     {
-        Meeting::query()->simplePaginate();
+        $meetings = Meeting::query()->simplePaginate();
+
+        return view('index', ['meetings' => $meetings]);
     }
 
     /**
@@ -42,8 +46,6 @@ class MeetingController extends Controller
             'description' => 'required',
             'short_description' => 'required',
             'image_url' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
             'location_description' => 'required',
             'lat' => 'required',
             'lng' => 'required'
@@ -57,6 +59,11 @@ class MeetingController extends Controller
 
         $meeting = new Meeting();
         $meeting->fill($request->all());
+
+        // Temporary. Wait for UI
+        $meeting->start_date = Carbon::now();
+        $meeting->end_date = Carbon::now();
+
         $meeting->author()->associate($user);
         $meeting->save();
 
@@ -69,7 +76,7 @@ class MeetingController extends Controller
 
     public function show(Meeting $meeting)
     {
-        return $meeting->toJson();
+        return view('meeting', ['meeting' => $meeting]);
     }
 
     /**
