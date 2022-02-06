@@ -1,0 +1,20 @@
+.site-nav {
+    bottom: 0;
+    border-top: 2px solid  $navyBlue;
+
+    &__item {
+        font-size: 22px;
+        color:  $navyBlue;
+    }
+
+    &__message-count {
+        width: 18px;
+        height: 18px;
+        background: $orangeColor;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 50%;
+        top: 0;
+        right: -10px;
+    }
+}

@@ -1,4 +1,6 @@
+require('bootstrap')
 window._ = require('lodash');
+window.Alpine = require('alpinejs').default;
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -15,6 +17,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
+
+window.Alpine.start();
 
 // import Echo from 'laravel-echo';
 
