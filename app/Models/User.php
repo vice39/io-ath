@@ -41,4 +41,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function meetings()
+    {
+        return $this->belongsToMany(Meeting::class, foreignPivotKey: 'participant_id');
+    }
+
+    public function createdMeetings()
+    {
+        return $this->hasMany(Meeting::class, 'author_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'author_id');
+    }
 }

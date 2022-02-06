@@ -1,0 +1,38 @@
+.comment {
+    margin-top: 25px;
+    color:  $darkGrey;
+    
+    &__wrapper {
+        border-radius: 0 0 8px 8px;
+        border: 1px solid  $lightGrey;
+
+    }
+}
+
+.comment-author {
+    padding: 15px;
+
+    &__image-wrapper {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        background: #fa786b;
+        overflow: hidden;
+    }
+
+    &__data {
+        margin-left: 10px;
+    }
+
+    &__name {
+        font-size: 16px;
+    }
+} 
+
+.comment-content {
+    padding: 5px 15px 0;
+
+    &__text {
+        font-size: 14px;
+    }
+}
