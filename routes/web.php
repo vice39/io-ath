@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyProfileController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
