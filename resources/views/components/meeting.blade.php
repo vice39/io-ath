@@ -31,6 +31,12 @@
                             5
                         </div>
                     </div>
+                    <section class="p-4">
+                        <h3>O wydarzeniu</h3>
+                        <div>
+                            {{ $description }}
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
