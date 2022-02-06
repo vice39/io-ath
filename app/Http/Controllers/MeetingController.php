@@ -69,7 +69,7 @@ class MeetingController extends Controller
 
     public function show(Meeting $meeting)
     {
-        return $meeting->toJson();
+        return view('meeting', ['meeting' => $meeting]);
     }
 
     /**

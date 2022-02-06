@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', [
+        'meetings' => \App\Models\Meeting::query()->simplePaginate(5)
+    ]);
 });
 
 Route::resource('meeting', \App\Http\Controllers\MeetingController::class);
