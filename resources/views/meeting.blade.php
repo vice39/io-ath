@@ -5,7 +5,9 @@
     @component('components.meeting', [
         'id' => $meeting->id,
         'title' => $meeting->title,
-        'author' => $meeting->author()
+        'author' => $meeting->author(),
+        'short_description' => $meeting->short_description,
+        'description' => $meeting->description,
     ])
     @endcomponent
 

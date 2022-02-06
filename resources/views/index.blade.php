@@ -6,10 +6,11 @@
 
     @foreach($meetings as $meeting)
 
-        @component('components.meeting', [
+        @component('components.meeting-preview', [
             'id' => $meeting->id,
             'title' => $meeting->title,
-            'author' => $meeting->author()
+            'author' => $meeting->author(),
+            'description' => $meeting->short_description
         ])
         @endcomponent
 

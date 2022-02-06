@@ -14,10 +14,12 @@
                             <div class="meeting-author__date">16 Feb at 19:56</div>
                         </div>
                     </div>
+                    <a class="text-black text-decoration-none" href="{{ route('meeting.show', ['meeting' => $id]) }}">
                         <div class="meeting-content">
                             <h2 class="meeting-content__title">{{ $title }}</h2>
-                            <div class="meeting-content__text">{{ $short_description }}</div>
+                            <div class="meeting-content__text">{{ $description }}</div>
                         </div>
+                    </a>
                     <img
                         src="https://image.shutterstock.com/image-photo/deskdecorative-table-lamp-loft-style-600w-1920224057.jpg"
                         class="meeting-image w-100">
