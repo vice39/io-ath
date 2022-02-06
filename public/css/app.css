@@ -1,23 +1,34 @@
 @import url(https://fonts.googleapis.com/css2?family=Salsa&display=swap);
+/*
+ * _variables.scss
+ */
+.button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background: #ff8811;
+  padding: 10px 30px;
+}
+
 .site-header {
-  color: #FF8811;
+  color: #ff8811;
   font-size: 40px;
-  border-bottom: 4px solid #484D6D;
+  border-bottom: 4px solid #484d6d;
   font-family: "Salsa", cursive;
 }
 
 .site-nav {
   bottom: 0;
-  border-top: 2px solid #484D6D;
+  border-top: 2px solid #484d6d;
 }
 .site-nav__item {
   font-size: 22px;
-  color: #484D6D;
+  color: #484d6d;
 }
 .site-nav__message-count {
   width: 18px;
   height: 18px;
-  background: #FF8811;
+  background: #ff8811;
   color: #fff;
   font-size: 12px;
   border-radius: 50%;
@@ -133,7 +144,6 @@
   padding: 10px;
   border: 1px solid #f2f3f5;
   background: #f2f3f5;
-  margin-left: 10px;
   border-radius: 8px;
 }
 .main-bar__category-wrapper {
@@ -145,12 +155,12 @@
   border: 2px solid #606770;
   border-radius: 8px;
   padding: 7px 10px;
-  color: #FF8811;
+  color: #ff8811;
   line-height: 1;
   transition: border-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 .main-bar__single-category:hover {
-  border-color: #FF8811;
+  border-color: #ff8811;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main-bar__filter {
@@ -158,10 +168,18 @@
   color: #606770;
   margin: 0 0 0 auto;
 }
+.main-bar__other {
+  opacity: 1;
+  transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+.main-bar__other--hidden {
+  max-height: 0;
+  opacity: 0;
+}
 
 .not-found__heading {
   font-size: 100px;
-  color: #484D6D;
+  color: #484d6d;
   font-family: "Salsa", cursive;
 }
 .not-found__description {
@@ -172,7 +190,7 @@
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  background: #FF8811;
+  background: #ff8811;
   border-radius: 8px;
   padding: 10px 30px;
   line-height: 1;

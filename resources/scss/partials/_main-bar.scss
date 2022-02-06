@@ -14,7 +14,6 @@
         padding: 10px;
         border: 1px solid  $backgroundWhite;
         background:  $backgroundWhite;
-        margin-left: 10px;
         border-radius: 8px;
     }
 
@@ -41,5 +40,15 @@
         font-size: 18px;
         color:  $darkGrey;
         margin: 0 0 0 auto;
+    }
+    
+    &__other {
+        opacity: 1;
+        transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
+
+        &--hidden {
+            max-height: 0;
+            opacity: 0;
+        }
     }
 }

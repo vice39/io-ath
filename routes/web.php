@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index', [
-        'meetings' => \App\Models\Meeting::query()->simplePaginate(5)
-    ]);
+    return view('welcome');
 });
+
+Route::get('/my-profile', [MyProfileController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::resource('meeting', \App\Http\Controllers\MeetingController::class);
 Route::resource('meeting.comments', \App\Http\Controllers\CommentController::class);
