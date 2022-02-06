@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         User::factory(2000)->create();
         Meeting::factory(200)->create();
         Category::factory(30)->create();
-        Comment::factory(30)->create();
 
         foreach (Meeting::all() as $meeting) {
             $participants = User::query()
