@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\MeetingController::class, 'index']);
 
 Route::get('/my-profile', [MyProfileController::class, 'index']);
 
