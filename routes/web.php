@@ -19,7 +19,7 @@ Route::get('/', [\App\Http\Controllers\MeetingController::class, 'index']);
 
 Route::get('/my-profile', [MyProfileController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+require __DIR__.'/auth.php';
 
 Route::resource('meeting', \App\Http\Controllers\MeetingController::class);
 Route::resource('meeting.comments', \App\Http\Controllers\CommentController::class);
