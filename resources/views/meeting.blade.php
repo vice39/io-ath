@@ -5,9 +5,11 @@
     @component('components.meeting', [
         'id' => $meeting->id,
         'title' => $meeting->title,
-        'author' => $meeting->author(),
+        'author' => $meeting->author()->get()[0]->name,
         'short_description' => $meeting->short_description,
         'description' => $meeting->description,
+        'created_at' => $meeting->created_at,
+        'comments_count' => $meeting->comments_count,
         'lat' => $meeting->lat,
         'lng' => $meeting->lng,
     ])

@@ -26,15 +26,11 @@
                                         alt="" class="meeting-author__image w-100 h-100 object-fit-cover">
                                 </div>
                                 <div class="meeting-author__data">
-                                    <div class="meeting-author__name">by Rosy Rose</div>
-                                    <div class="meeting-author__date">16 Feb at 19:56</div>
+                                    <div class="meeting-author__name">Utworzone przez: {{$author}}</div>
+                                    <div class="meeting-author__date">{{$created_at}}</div>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-{{--                                <div class="meeting-bar__icon d-flex align-items-center">--}}
-{{--                                    <i class="fas fa-heart d-flex align-items-center"></i>--}}
-{{--                                    3--}}
-{{--                                </div>--}}
                                 <div class="meeting-bar__icon d-flex align-items-center">
                                     <i class="fas fa-comment d-flex align-items-center"></i>
                                         {{ $comments_count }}
