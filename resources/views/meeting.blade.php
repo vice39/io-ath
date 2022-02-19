@@ -11,28 +11,34 @@
     ])
     @endcomponent
 
-    @foreach($meeting->comments as $comment)
-        @include('partials.comment', ['comment' => $comment])
-    @endforeach
+    <div class="container mt-3">
+        <h3 class="px-2">
+            Komentarze
+        </h3>
 
-    <div class="comment">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h4>Dodaj komentarz</h4>
-                </div>
-                <div class="col-12">
-                    <form method="post" action="{{ route('meeting.comments.store', [ 'meeting' => $meeting ]) }}">
-                        @csrf
+        @foreach($meeting->comments as $comment)
+            @include('partials.comment', ['comment' => $comment])
+        @endforeach
 
-                        <textarea class="w-100" name="content">
+        @auth
+            <div class="comment">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Dodaj komentarz</h4>
+                    </div>
+                    <div class="col-12">
+                        <form method="post" action="{{ route('meeting.comments.store', [ 'meeting' => $meeting ]) }}">
+                            @csrf
+
+                            <textarea class="w-100" name="content">
                         </textarea>
 
-                        <input class="mt-2" type="submit">
-                    </form>
+                            <input class="mt-2" type="submit">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endauth
     </div>
 
 
