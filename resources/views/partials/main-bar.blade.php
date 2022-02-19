@@ -53,12 +53,12 @@
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Lat</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="lat" type="number" min="-90" max="90" required>
+                                <input class="main-bar__input flex-grow-1 w-100" name="lat" type="number" min="-90" max="90" step="any" required>
                             </div>
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Lng</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="lng" type="number" min="-180" max="180" required>
+                                <input class="main-bar__input flex-grow-1 w-100" name="lng" type="number" min="-180" max="180" step="any" required>
                             </div>
 
                             <div class="d-flex align-items-end">

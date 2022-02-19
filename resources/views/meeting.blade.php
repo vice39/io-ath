@@ -8,6 +8,8 @@
         'author' => $meeting->author(),
         'short_description' => $meeting->short_description,
         'description' => $meeting->description,
+        'lat' => $meeting->lat,
+        'lng' => $meeting->lng,
     ])
     @endcomponent
 
