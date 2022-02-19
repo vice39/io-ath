@@ -19,6 +19,8 @@
 
     @endforeach
 
-    {{ $meetings->links() }}
+    <div class="container mt-4 d-flex justify-content-end">
+        {{ $meetings->links() }}
+    </div>
 
 @endsection

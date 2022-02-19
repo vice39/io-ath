@@ -34,7 +34,6 @@
                             <input class="mt-2" type="submit">
                         </form>
                     </div>
-                </div>
             </div>
         @endauth
     </div>
