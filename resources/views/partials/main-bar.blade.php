@@ -24,41 +24,41 @@
                         <div
                             class="main-bar__input-wrapper ms-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="d-none mb-2 main-bar__main-label" for="name">Tytuł wydarzenia</label>
-                            <input class="main-bar__input flex-grow-1 w-100" name="title"
+                            <input class="main-bar__input flex-grow-1 w-100" name="title" required
                                    placeholder="Jakie wydarzenie chciałbyś dziś utworzyć?">
                         </div>
                         <div class="main-bar__other">
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Opis</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="description">
+                                <input class="main-bar__input flex-grow-1 w-100" name="description" required>
                             </div>
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Krótki opis</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="short_description">
+                                <input class="main-bar__input flex-grow-1 w-100" name="short_description" required>
                             </div>
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">URL Obrazu</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="image_url">
+                                <input class="main-bar__input flex-grow-1 w-100" name="image_url" required>
                             </div>
 
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Opis lokacji</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="location_description">
+                                <input class="main-bar__input flex-grow-1 w-100" name="location_description" required>
                             </div>
 
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Lat</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="lat">
+                                <input class="main-bar__input flex-grow-1 w-100" name="lat" type="number" min="-90" max="90" required>
                             </div>
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                                 <label class="mb-2" for="name">Lng</label>
-                                <input class="main-bar__input flex-grow-1 w-100" name="lng">
+                                <input class="main-bar__input flex-grow-1 w-100" name="lng" type="number" min="-180" max="180" required>
                             </div>
 
                             <div class="d-flex align-items-end">
