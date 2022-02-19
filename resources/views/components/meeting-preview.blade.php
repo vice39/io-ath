@@ -7,7 +7,7 @@
                         height="250"
                         style="object-fit: cover"
                         src="https://picsum.photos/500/250?{{ $id }}"
-                        class="meeting-image w-100 ms-3 rounded-3 mt-0">
+                        class="meeting-image w-100 ms-2 rounded-3 mt-0">
                 </div>
                 <div class="col-7">
                     <div class="ps-3 h-100 d-flex flex-column justify-content-between">
