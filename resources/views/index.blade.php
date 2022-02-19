@@ -2,9 +2,7 @@
 
 @section('content')
 
-    @auth
-        @include('partials.main-bar')
-    @endauth
+    @include('partials.main-bar')
 
     @foreach($meetings as $meeting)
 

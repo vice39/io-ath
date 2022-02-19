@@ -1,5 +1,5 @@
 .main-bar{
-    margin: 20px 0;
+    margin: 10px 0;
 
     &__image-wrapper {
         border-radius: 50%;
@@ -18,12 +18,11 @@
     }
 
     &__category-wrapper {
-        margin-top: 15px;
         gap: 5px;
     }
     &__single-category {
         font-size: 12px;
-        border: 2px solid  $darkGrey;
+        border: 1px solid  $darkGrey;
         border-radius: 8px;
         padding: 7px 10px;
         color: $blue;
