@@ -1,16 +1,16 @@
 .comment {
-    margin-top: 25px;
-    color:  $darkGrey;
-    
+    color: $darkGrey;
+    margin-bottom: 16px;
+
     &__wrapper {
-        border-radius: 0 0 8px 8px;
-        border: 1px solid  $lightGrey;
+        border-radius: 8px;
+        border: 1px solid $lightGrey;
 
     }
 }
 
 .comment-author {
-    padding: 15px;
+    padding: 8px;
 
     &__image-wrapper {
         border-radius: 50%;
@@ -25,14 +25,16 @@
     }
 
     &__name {
-        font-size: 16px;
+        font-size: 20px;
+        margin-bottom: 4px;
     }
-} 
+}
 
 .comment-content {
     padding: 5px 15px 0;
 
     &__text {
-        font-size: 14px;
+        font-size: 16px;
+        margin-bottom: 6px;
     }
 }

@@ -12,7 +12,7 @@
     @endcomponent
 
     <div class="container mt-3">
-        <h3 class="px-2">
+        <h3 class="">
             Komentarze
         </h3>
 
@@ -21,17 +21,15 @@
         @endforeach
 
         @auth
-            <div class="comment">
                 <div class="row">
                     <div class="col-12">
-                        <h4>Dodaj komentarz</h4>
+                        <h3>Dodaj komentarz</h3>
                     </div>
                     <div class="col-12">
                         <form method="post" action="{{ route('meeting.comments.store', [ 'meeting' => $meeting ]) }}">
                             @csrf
 
-                            <textarea class="w-100" name="content">
-                        </textarea>
+                            <textarea class="w-100 comment__wrapper" name="content"></textarea>
 
                             <input class="mt-2" type="submit">
                         </form>
