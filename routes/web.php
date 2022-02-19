@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\MeetingController;
 use App\Http\Controllers\MyProfileController;
-use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,12 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\MeetingController::class, 'index']);
+require __DIR__ . '/auth.php';
 
-Route::get('/my-profile', [MyProfileController::class, 'index']);
+Route::get('/', [MeetingController::class, 'index']);
+Route::get('/my-profile', [MyProfileController::class, 'index'])
+    ->middleware('auth')
+    ->name('my-profile');
 
-require __DIR__.'/auth.php';
-
-Route::resource('meeting', \App\Http\Controllers\MeetingController::class);
-Route::resource('meeting.comments', \App\Http\Controllers\CommentController::class);
+Route::resource('meeting', MeetingController::class);
+Route::resource('meeting.comments', CommentController::class);
