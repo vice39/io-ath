@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Meeting;
 use App\Models\User;
 use Carbon\Carbon;
-use Carbon\Exceptions\Exception;
 use Illuminate\Http\Request;
 
 class MeetingController extends Controller
@@ -13,12 +12,15 @@ class MeetingController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth')->only(['store', 'addParticipant']);
     }
 
     public function index(Meeting $meeting)
     {
-        $meetings = Meeting::query()->simplePaginate();
+        $meetings = Meeting::query()
+            ->withCount('comments')
+            ->latest()
+            ->simplePaginate();
 
         return view('index', ['meetings' => $meetings]);
     }
@@ -63,7 +65,6 @@ class MeetingController extends Controller
         $meeting->author()->associate($user);
         $meeting->save();
 
-
         return redirect()->action(
             [MeetingController::class, 'show'],
             ['meeting' => $meeting]
@@ -107,5 +108,10 @@ class MeetingController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function addParticipant(Request $request, Meeting $meeting, User $user)
+    {
+
     }
 }

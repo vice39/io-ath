@@ -31,13 +31,13 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
-                                <div class="meeting-bar__icon d-flex align-items-center">
-                                    <i class="fas fa-heart d-flex align-items-center"></i>
-                                    3
-                                </div>
+{{--                                <div class="meeting-bar__icon d-flex align-items-center">--}}
+{{--                                    <i class="fas fa-heart d-flex align-items-center"></i>--}}
+{{--                                    3--}}
+{{--                                </div>--}}
                                 <div class="meeting-bar__icon d-flex align-items-center">
                                     <i class="fas fa-comment d-flex align-items-center"></i>
-                                    5
+                                        {{ $comments_count }}
                                 </div>
                             </div>
                         </div>
