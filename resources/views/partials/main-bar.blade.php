@@ -26,14 +26,7 @@
                             <label class="mb-2" for="name">URL Obrazu</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="image_url">
                         </div>
-{{--                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">--}}
-{{--                            <label class="mb-2" for="name">Data startu</label>--}}
-{{--                            <input class="main-bar__input flex-grow-1 w-100" name="start_date">--}}
-{{--                        </div>--}}
-{{--                        <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">--}}
-{{--                            <label class="mb-2" for="name">Koniec</label>--}}
-{{--                            <input class="main-bar__input flex-grow-1 w-100" name="end_date">--}}
-{{--                        </div>--}}
+
                         <div class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="mb-2" for="name">Opis lokacji</label>
                             <input class="main-bar__input flex-grow-1 w-100" name="location_description">
