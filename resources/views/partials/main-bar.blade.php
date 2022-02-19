@@ -24,7 +24,8 @@
                         <div
                             class="main-bar__input-wrapper ms-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="d-none mb-2 main-bar__main-label" for="name">Tytuł wydarzenia</label>
-                            <input class="main-bar__input flex-grow-1 w-100" name="title" placeholder="Jakie wydarzenie chciałbyś dziś utworzyć?">
+                            <input class="main-bar__input flex-grow-1 w-100" name="title"
+                                   placeholder="Jakie wydarzenie chciałbyś dziś utworzyć?">
                         </div>
                         <div class="main-bar__other">
                             <div
@@ -51,12 +52,12 @@
 
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
-                                <label class="mb-2" for="name">Lat</label>
+                                <label class="mb-2" for="name">Szerokość geograficzna</label>
                                 <input class="main-bar__input flex-grow-1 w-100" name="lat">
                             </div>
                             <div
                                 class="main-bar__input-wrapper ms-3 pt-3 d-flex flex-column align-items-start justify-content-center">
-                                <label class="mb-2" for="name">Lng</label>
+                                <label class="mb-2" for="name">Długość geograficzna</label>
                                 <input class="main-bar__input flex-grow-1 w-100" name="lng">
                             </div>
 
@@ -70,12 +71,16 @@
                             </div>
                         </div>
                         @if($errors->any())
-                            <h4>
-                                Oops! Nie można utworzyć wydarzenia!
-                                Wystąpiły następujące błędy:
-                            </h4>
-                            <div>
-                                {{ $errors }}
+                            <div class="ms-3 mt-3">
+                                <h4>
+                                    Oops! Nie można utworzyć wydarzenia!
+                                    Wystąpiły następujące błędy:
+                                </h4>
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
                         @endif
                     </form>
