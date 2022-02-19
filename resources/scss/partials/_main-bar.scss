@@ -41,12 +41,13 @@
         color:  $darkGrey;
         margin: 0 0 0 auto;
     }
-    
+
     &__other {
         opacity: 1;
         transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
 
         &--hidden {
+            pointer-events: none;
             max-height: 0;
             opacity: 0;
         }

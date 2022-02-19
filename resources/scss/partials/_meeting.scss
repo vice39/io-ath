@@ -3,7 +3,7 @@
 .meeting {
     margin-top: 25px;
     color:  $darkGrey;
-    
+
     &__wrapper {
         border-radius: 8px;
         border: 1px solid  $lightGrey;
@@ -38,13 +38,13 @@
         font-size: 12px;
         margin-top: 5px;
     }
-} 
+}
 
 .meeting-content {
     padding: 5px 15px 0;
 
     &__title {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 15px;
     }
 
@@ -62,9 +62,9 @@
     }
 
     &__icon {
-        font-size: 12px;
+        font-size: 14px;
         .fas {
-            font-size: 14;
+            font-size: 14px;
             margin-right: 5px;
         }
     }

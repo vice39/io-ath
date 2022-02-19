@@ -14,7 +14,6 @@
 <body>
     @include('partials.header')
     @yield('content')
-    @include('partials.nav')
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
 </html>
