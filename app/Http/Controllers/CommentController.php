@@ -16,11 +16,7 @@ class CommentController extends Controller
             'content' => 'required',
         ]);
 
-        // TODO Once auth is added, change user to auth()->user()
-        // $user = auth()->user();
-
-        /** @var User $user */
-        $user = User::query()->first();
+         $user = auth()->user();
 
         $comment = new Comment();
         $comment->content = $request->get('content');

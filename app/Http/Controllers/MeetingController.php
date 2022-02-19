@@ -51,11 +51,7 @@ class MeetingController extends Controller
             'lng' => 'required'
         ]);
 
-        // TODO Once auth is added, change user to auth()->user()
-        // $user = auth()->user();
-
-        /** @var User $user */
-        $user = User::query()->first();
+        $user = auth()->user();
 
         $meeting = new Meeting();
         $meeting->fill($request->all());
