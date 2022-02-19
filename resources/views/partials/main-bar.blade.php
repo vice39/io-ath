@@ -24,7 +24,8 @@
                         <div
                             class="main-bar__input-wrapper ms-3 d-flex flex-column align-items-start justify-content-center">
                             <label class="d-none mb-2 main-bar__main-label" for="name">Tytuł wydarzenia</label>
-                            <input class="main-bar__input flex-grow-1 w-100" name="title" placeholder="Jakie wydarzenie chciałbyś dziś utworzyć?">
+                            <input class="main-bar__input flex-grow-1 w-100" name="title"
+                                   placeholder="Jakie wydarzenie chciałbyś dziś utworzyć?">
                         </div>
                         <div class="main-bar__other">
                             <div
@@ -80,9 +81,7 @@
                         @endif
                     </form>
                 </div>
-            @endauth
             <script>
-
                 let mainBarOther = document.querySelector('.main-bar__other');
                 let mainBarForm = document.querySelector('.main-bar__form');
                 let mainBarHideButton = document.querySelector('.main-bar__hidden');
@@ -99,16 +98,13 @@
                     }
 
                 });
-
                 mainBarHideButton.addEventListener('click', _ => {
                     mainBarOther.style.maxHeight = 0;
                     mainBarOther.classList.add('main-bar__other--hidden');
                     mainBarMainLabel.classList.add('d-none');
                 });
-
-
             </script>
-
+            @endauth
         </div>
     </div>
 </div>
